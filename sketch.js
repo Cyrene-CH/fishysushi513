@@ -66,7 +66,7 @@ function preload() {
   //   }
 
   //sushi pictures,k controls the fish type;different net catch different range
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 6; i++) {
     sushipic[i] = loadImage("sushipic/su" + i + ".png");
   }
 }
