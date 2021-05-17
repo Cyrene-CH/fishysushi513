@@ -185,11 +185,11 @@ function draw() {
   if (keyIsDown(RIGHT_ARROW)) {
     a += 15;
   }
-  image(man, a, 600, 450, 450);
+  image(man, a, 680, 350, 350);
   fill(0,0,0,100)
   text("Move️:️️⬅️➡️\nCatch fish:⬇️",900,860)
   fill(0, red, 255, 150);
-  triangle(140 + a, 918, 6 + a, 1047, 190 + a, 1053);
+  triangle(120 + a, 918, 0 + a, 1027, 150 + a, 1033);
 
   if (a <= 660) {
     a = 660;
