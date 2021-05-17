@@ -20,8 +20,11 @@ let knf1, knf2;
 let m=1
 let fishnum=2
 let RDS
+let priceD=[10,15,25,35,40,50,60]
 // let lines1 = 'Silver Fishnet\n$90'
 function preload() {
+  //menu
+  menu=loadImage("menu.png")
   //loadfisherman
   man = loadImage("fisherman.png");
   //knives
@@ -78,6 +81,8 @@ function setup() {
   for (let i = 0; i < 2; i++) {
     clouds[i] = new Cloud();
   }
+  //money
+  
   //blood effect
   slider = createSlider(0, 360, 180, 40);
   slider.position(-260, -610);
@@ -133,10 +138,14 @@ function morefish() {
   let protection = 0;
   let targetFishCount = fishArray.length + random(1, fishnum);
   while (fishArray.length < targetFishCount) {
-    let pic = random(fishpic);
 
-    let supic = random(sushipic);
-    let aFish = new Fish(random(100, 580), random(370, 630), 110, pic, supic);
+let ix=int(random(fishpic.length))
+
+console.log[ix]
+    let pic = fishpic[ix];
+    let supic = sushipic[ix];
+    let priceA= priceD[ix]
+    let aFish = new Fish(random(100, 580), random(370, 630), 110, pic, supic,priceA);
     let overlapping = false;
     for (var j = 0; j < fishArray.length; j++) {
       let other = fishArray[j];
@@ -297,6 +306,11 @@ function draw() {
     image(sivkm, mouseX - 20, mouseY - 50, 50, 100);
   }
   
+//menu
+image(menu,750,20)
+
+
+
 }
 function sunshine(){
   noStroke();

@@ -1,5 +1,5 @@
 class Fish {
-  constructor(x, y, r, image, suimage) {
+  constructor(x, y, r, image, suimage,pri) {
     this.x = x;
     this.y = y;
     this.r = r;
@@ -8,6 +8,7 @@ class Fish {
     this.prevNotInsideFishState = "outside";
     this.chopvalue = 0;
     this.visible = true;
+    this.pri=pri
   }
   draw() {
     if (this.visible) {
@@ -75,7 +76,7 @@ class Fish {
     ) {
       this.x = -500;
       this.y = -500;
-      money += round(random(15,60));
+      money += this.pri;
     }
   }
 }
